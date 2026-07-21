@@ -14,7 +14,8 @@ pub fn main(init: std.process.Init) !void {
     var stdout_writer = std.Io.File.stdout().writer(io, &.{});
     const stdout = &stdout_writer.interface;
 
-    const my_num: u32 = getNumber() catch 42;
+    const my_num: u32 = try getNumber(); //if this errors, go up
+    // const my_num: u32 = getNumber() catch unreachable; //this cannot error
 
     try stdout.print("my_num={}\n", .{my_num});
 }
