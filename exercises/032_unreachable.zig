@@ -18,7 +18,7 @@
 // unreachable statement to make the switch complete. Or ELSE. :-)
 //
 const std = @import("std");
-
+//unreach
 pub fn main() void {
     const operations = [_]u8{ 1, 1, 1, 3, 2, 2 };
 
